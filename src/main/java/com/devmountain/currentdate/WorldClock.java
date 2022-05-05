@@ -15,35 +15,52 @@ public class WorldClock {
     }
 
     public DayOfWeek getDayOfWeekForNow() {
-        return null;
+        LocalDate now = LocalDate.now();
+        DayOfWeek dayOfWeek = DayOfWeek.from(now);
+        return dayOfWeek;
     }
 
     public int getDayOfMonthForNow() {
-        return 0;
+        LocalDate now = LocalDate.now();
+
+        return now.getDayOfMonth();
     }
 
     public int getDayOfYearForNow() {
-        return 0;
+        LocalDate dayOfYear = LocalDate.now();
+        return dayOfYear.getDayOfYear();
     }
 
     public ZonedDateTime getNowDateTimeForNewYork() {
-        return null;
+        ZoneId zoneid = ZoneId.of("America/New_York");
+        ZonedDateTime newYorkTime = ZonedDateTime.of(LocalDateTime.now(zoneid), zoneid);
+//        ZonedDateTime newYorkTime = ZonedDateTime.
+
+        return newYorkTime;
     }
 
     public ZonedDateTime getNowDateTimeForLA() {
-        return null;
+        ZoneId zoneid = ZoneId.of("America/Los_Angeles");
+        ZonedDateTime laTime = ZonedDateTime.of(LocalDateTime.now(zoneid),zoneid);
+        return laTime;
     }
 
     public ZonedDateTime getNowDateTimeForLondon() {
-        return null;
+        ZoneId zoneid = ZoneId.of("Europe/London");
+        ZonedDateTime londonTime = ZonedDateTime.of(LocalDateTime.now(zoneid),zoneid);
+        return londonTime;
     }
 
     public ZonedDateTime getNowDateTimeForMoscow() {
-        return null;
+        ZoneId zoneid = ZoneId.of("Europe/Moscow");
+        ZonedDateTime moscowTime = ZonedDateTime.of(LocalDateTime.now(zoneid),zoneid);
+        return moscowTime;
     }
 
     public ZonedDateTime getNowDateTimeForTokyo() {
-        return null;
+        ZoneId zoneid = ZoneId.of("Asia/Tokyo");
+        ZonedDateTime tokyoTime = ZonedDateTime.of(LocalDateTime.now(zoneid),zoneid);
+        return tokyoTime;
     }
 
 
